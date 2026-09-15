@@ -1,6 +1,6 @@
 /* Service worker: cachea la app completa para funcionar sin conexión.
    IMPORTANTE: subir CACHE_VERSION en cada release para que los clientes actualicen. */
-const CACHE_VERSION = "taller-v0.1.2";
+const CACHE_VERSION = "taller-v0.1.3";
 const ASSETS = [
   "./",
   "./index.html",

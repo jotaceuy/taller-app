@@ -1,21 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" fill="#1f2937"/>
   <g transform="translate(51.2,46) scale(0.8)">
-    <!-- mástil y clavijero -->
-    <rect x="226" y="52" width="60" height="70" rx="10" fill="#4a2f1a"/>
-    <!-- caja -->
-    <path d="M256 150 C 336 150, 384 186, 384 232 C 384 270, 356 280, 356 302 C 356 336, 404 350, 404 400 C 404 448, 340 474, 256 474 C 172 474, 108 448, 108 400 C 108 350, 156 336, 156 302 C 156 280, 128 270, 128 232 C 128 186, 176 150, 256 150 Z" fill="#d9a35a"/>
-    <!-- diapasón hasta la roseta -->
-    <rect x="235" y="112" width="42" height="92" fill="#3b2411"/>
-    <g stroke="#e9d8b8" stroke-width="4" stroke-linecap="round">
-      <line x1="235" y1="132" x2="277" y2="132"/><line x1="235" y1="156" x2="277" y2="156"/><line x1="235" y1="178" x2="277" y2="178"/>
+    <!-- tabla -->
+    <rect x="36" y="398" width="440" height="52" rx="8" fill="#8a5a2b"/>
+    <rect x="36" y="398" width="440" height="10" rx="5" fill="#a86f38"/>
+    <!-- cuerpo del cepillo -->
+    <rect x="78" y="296" width="356" height="102" rx="14" fill="#d9a35a"/>
+    <rect x="78" y="384" width="356" height="14" fill="#b8843f"/>
+    <!-- boca -->
+    <rect x="200" y="352" width="34" height="46" fill="#1f2937"/>
+    <!-- cuchilla y cuña (inclinadas 45º hacia atrás) -->
+    <g transform="translate(224,372) rotate(45)">
+      <rect x="-11" y="-168" width="22" height="178" fill="#c9ced6"/>
+      <rect x="-11" y="-168" width="22" height="24" fill="#8f959e"/>
+      <path d="M-34 -12 L-11 -12 L-11 -122 Z" fill="#6b4423"/>
     </g>
-    <!-- roseta -->
-    <circle cx="256" cy="262" r="60" fill="none" stroke="#3b2411" stroke-width="16"/>
-    <circle cx="256" cy="262" r="60" fill="none" stroke="#e9d8b8" stroke-width="6" stroke-dasharray="7 7"/>
-    <circle cx="256" cy="262" r="42" fill="#1f2937"/>
-    <!-- puente -->
-    <rect x="206" y="372" width="100" height="18" rx="4" fill="#3b2411"/>
-    <rect x="216" y="368" width="80" height="6" rx="3" fill="#e9d8b8"/>
+    <!-- pomo delantero -->
+    <path d="M110 296 C 110 258, 134 240, 150 240 C 166 240, 190 258, 190 296 Z" fill="#6b4423"/>
+    <!-- mango trasero -->
+    <path d="M352 296 C 350 252, 364 208, 396 196 C 416 190, 432 206, 426 226 C 418 254, 404 270, 408 296 Z" fill="#6b4423"/>
+    <!-- viruta -->
+    <path d="M190 352 C 164 352, 136 330, 138 300 C 140 274, 170 268, 178 288 C 184 304, 164 316, 154 300" fill="none" stroke="#f1e3c3" stroke-width="12" stroke-linecap="round"/>
   </g>
 </svg>
