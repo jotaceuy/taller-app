@@ -4,9 +4,9 @@ Lista cerrada de módulos. Agregar acá antes de empezar a programar algo nuevo.
 
 ## Hecho
 - [x] **Epoxi** — proporción 1/x configurable, productos guardados, lectura de balanza según tarado.
+- [x] **Goma laca** (v0.2.0) — cortes con presets editables y equivalencias lb/gal · g/L · 1:x en peso; preparar mezcla desde escamas o desde volumen deseado; diluir (o reforzar) una mezcla existente; densidad del alcohol ajustable.
 
 ## Pendiente
-- [ ] **Goma laca** — dilución por corte (lb cut → g de escamas por litro de alcohol; o partir de una cantidad final).
 - [ ] **Humedad** — humedad relativa + temperatura → contenido de humedad de equilibrio (EMC) de la madera (Hailwood–Horrobin / Simpson). Indicador de si conviene encolar.
 
 ## Ideas (no comprometidas)

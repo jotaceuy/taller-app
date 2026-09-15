@@ -1,6 +1,6 @@
 /* Service worker: cachea la app completa para funcionar sin conexión.
    IMPORTANTE: subir CACHE_VERSION en cada release para que los clientes actualicen. */
-const CACHE_VERSION = "taller-v0.1.3";
+const CACHE_VERSION = "taller-v0.2.0";
 const ASSETS = [
   "./",
   "./index.html",
@@ -30,7 +30,7 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET" || new URL(e.request.url).origin !== location.origin) return;
   e.respondWith(
-    fetch(e.request).then(res => {
+    fetch(e.request, { cache: "no-cache" }).then(res => {
       if (res.ok) { const copy = res.clone(); caches.open(CACHE_VERSION).then(c => c.put(e.request, copy)); }
       return res;
     }).catch(() => caches.match(e.request, { ignoreSearch: true }).then(hit => hit || caches.match("./index.html")))
