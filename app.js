@@ -1,7 +1,7 @@
 /* Núcleo de la app: registro de módulos, solapas, utilidades comunes.
    Cada módulo se registra con App.register({ id, title, icon, status?, render(root) }). */
 const App = (() => {
-  const VERSION = "0.1.0";
+  const VERSION = "0.1.1";
   const modules = [];
   const STORAGE_TAB = "taller:tab";
 
@@ -88,14 +88,29 @@ const App = (() => {
 
   /* ---------- Pantalla encendida (Wake Lock) ---------- */
   let wakeLock = null;
+  function setWakeUI(btn, on) {
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.querySelector(".lbl").textContent = on ? "Encendida" : "Pantalla";
+  }
   async function toggleWake(btn) {
-    if (!("wakeLock" in navigator)) { toast("Este navegador no permite bloquear la pantalla"); return; }
-    if (wakeLock) { await wakeLock.release(); wakeLock = null; btn.setAttribute("aria-pressed", "false"); return; }
+    if (!("wakeLock" in navigator)) { toast("Este navegador no permite mantener la pantalla encendida"); return; }
+    if (wakeLock) {
+      await wakeLock.release(); wakeLock = null;
+      setWakeUI(btn, false);
+      toast("La pantalla volverá a apagarse sola");
+      return;
+    }
     try {
       wakeLock = await navigator.wakeLock.request("screen");
-      btn.setAttribute("aria-pressed", "true");
-      wakeLock.addEventListener("release", () => { wakeLock = null; btn.setAttribute("aria-pressed", "false"); });
-    } catch { toast("No se pudo mantener la pantalla encendida"); }
+      setWakeUI(btn, true);
+      toast("Pantalla encendida mientras la app esté abierta");
+      wakeLock.addEventListener("release", () => { wakeLock = null; setWakeUI(btn, false); });
+    } catch (e) {
+      const why = e && e.name === "NotAllowedError"
+        ? "El sistema no lo permite. Desactivar el ahorro de batería y volver a intentar."
+        : `No se pudo (${e && e.name ? e.name : "error"})`;
+      toast(why, 5000);
+    }
   }
   document.addEventListener("visibilitychange", async () => {
     // Al volver a la app, reintentar el bloqueo si estaba activo
