@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1f2937">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Taller</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="icons/icon-192.png" alt="" width="36" height="36">
+      <span>Taller</span>
+    </div>
+    <button id="btn-wake" class="btn-icon" type="button" aria-pressed="false" title="Mantener la pantalla encendida">
+      <span class="ico">☀</span><span class="lbl">Pantalla</span>
+    </button>
+  </header>
+
+  <nav id="tabs" class="tabs" role="tablist" aria-label="Módulos"></nav>
+
+  <main id="panels" class="panels"></main>
+
+  <footer class="footer">
+    <span id="version"></span>
+    <span id="online-state"></span>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="app.js"></script>
+  <script src="modules/epoxi.js"></script>
+  <script src="modules/gomalaca.js"></script>
+  <script src="modules/humedad.js"></script>
+  <script>App.start();</script>
+</body>
+</html>
