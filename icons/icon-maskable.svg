@@ -1,5 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" fill="#1f2937"/>
-  <path d="M256 128 C256 128 158 250 158 310 A98 98 0 0 0 354 310 C354 250 256 128 256 128 Z" fill="#e6902e"/>
-  <path d="M198 318 a58 58 0 0 0 43 55" fill="none" stroke="#fff3e0" stroke-width="16" stroke-linecap="round" opacity=".9"/>
+  <g transform="translate(51.2,46) scale(0.8)">
+    <!-- mástil y clavijero -->
+    <rect x="226" y="52" width="60" height="70" rx="10" fill="#4a2f1a"/>
+    <!-- caja -->
+    <path d="M256 150 C 336 150, 384 186, 384 232 C 384 270, 356 280, 356 302 C 356 336, 404 350, 404 400 C 404 448, 340 474, 256 474 C 172 474, 108 448, 108 400 C 108 350, 156 336, 156 302 C 156 280, 128 270, 128 232 C 128 186, 176 150, 256 150 Z" fill="#d9a35a"/>
+    <!-- diapasón hasta la roseta -->
+    <rect x="235" y="112" width="42" height="92" fill="#3b2411"/>
+    <g stroke="#e9d8b8" stroke-width="4" stroke-linecap="round">
+      <line x1="235" y1="132" x2="277" y2="132"/><line x1="235" y1="156" x2="277" y2="156"/><line x1="235" y1="178" x2="277" y2="178"/>
+    </g>
+    <!-- roseta -->
+    <circle cx="256" cy="262" r="60" fill="none" stroke="#3b2411" stroke-width="16"/>
+    <circle cx="256" cy="262" r="60" fill="none" stroke="#e9d8b8" stroke-width="6" stroke-dasharray="7 7"/>
+    <circle cx="256" cy="262" r="42" fill="#1f2937"/>
+    <!-- puente -->
+    <rect x="206" y="372" width="100" height="18" rx="4" fill="#3b2411"/>
+    <rect x="216" y="368" width="80" height="6" rx="3" fill="#e9d8b8"/>
+  </g>
 </svg>
