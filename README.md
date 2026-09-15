@@ -20,10 +20,17 @@ python3 -m http.server 8765 --directory ~/obsidian/second-brain/taller-app
 ```
 Abrir http://localhost:8765
 
-## Instalar en la tablet
-La instalación como PWA (y el modo offline) requiere HTTPS. `localhost` está exento, pero la IP de la Mac en la red local no. Opciones:
-- Publicar en GitHub Pages (repo público o privado con Pages) y abrir la URL en Chrome de la tablet → menú ⋮ → "Agregar a la pantalla principal".
-- Túnel HTTPS temporal (por ejemplo `cloudflared tunnel --url http://localhost:8765`) para probar antes de publicar.
+## Publicación e instalación en la tablet
+La app se publica en **GitHub Pages** desde la rama `main` del repo `jotaceuy/taller-app`:
+
+**https://jotaceuy.github.io/taller-app/**
+
+Instalar en la tablet: abrir esa URL en Chrome, esperar unos segundos a que se cachee, y en el menú ⋮ elegir "Instalar aplicación" (o "Agregar a pantalla principal"). Desde ese momento funciona sin conexión.
+
+Publicar una versión nueva:
+1. Subir `CACHE_VERSION` en `sw.js` y `VERSION` en `app.js`.
+2. `git commit` + `git push`. Pages se despliega solo en uno o dos minutos.
+3. En la tablet, abrir la app con internet: se actualiza sola.
 
 ## Estilo de textos
 Registro impersonal, verbos en infinitivo, sin voseo (mismo criterio que Rosette Designer).
