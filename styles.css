@@ -194,3 +194,19 @@ input::placeholder { color: var(--muted); opacity: .7; }
   .result .v { font-size: 1.6rem; }
   .result.hero .v { font-size: 2.2rem; }
 }
+
+/* ---------- Humedad: semáforo y tabla ---------- */
+.semaforo { margin-top: 12px; padding: 14px 16px; border-radius: 12px; border-left: 8px solid var(--line); background: var(--panel-2); }
+.semaforo .sem-titulo { margin: 0 0 4px; font-size: 1.25rem; font-weight: 700; }
+.semaforo.niv-ok { border-left-color: var(--ok); }
+.semaforo.niv-casi { border-left-color: var(--accent); }
+.semaforo.niv-no { border-left-color: var(--warn); }
+.tabla { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.tabla th { text-align: left; color: var(--muted); font-size: .85rem; text-transform: uppercase; letter-spacing: .03em; padding: 6px 10px; border-bottom: 2px solid var(--line); }
+.tabla td { padding: 8px 10px; border-bottom: 1px solid var(--line); font-size: 1.1rem; }
+.tabla td:last-child { color: var(--muted); font-size: .95rem; }
+.tabla tr.niv-ok td:last-child { color: var(--ok); font-weight: 600; }
+.tabla tr.niv-no td:last-child { color: var(--warn); }
+.tabla tr.actual td { background: var(--accent); color: var(--accent-text) !important; font-weight: 700; }
+.tabla tr.actual td:first-child { border-radius: 8px 0 0 8px; }
+.tabla tr.actual td:last-child { border-radius: 0 8px 8px 0; }
