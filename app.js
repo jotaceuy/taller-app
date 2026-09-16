@@ -1,7 +1,7 @@
 /* Núcleo de la app: registro de módulos, solapas, utilidades comunes.
    Cada módulo se registra con App.register({ id, title, icon, status?, render(root) }). */
 const App = (() => {
-  const VERSION = "0.3.0";
+  const VERSION = "0.4.0";
   const modules = [];
   const STORAGE_TAB = "taller:tab";
 
