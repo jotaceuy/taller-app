@@ -1,6 +1,6 @@
 /* Service worker: cachea la app completa para funcionar sin conexión.
    IMPORTANTE: subir CACHE_VERSION en cada release para que los clientes actualicen. */
-const CACHE_VERSION = "taller-v0.4.0";
+const CACHE_VERSION = "taller-v0.5.0";
 const ASSETS = [
   "./",
   "./index.html",
@@ -9,6 +9,8 @@ const ASSETS = [
   "./modules/epoxi.js",
   "./modules/gomalaca.js",
   "./modules/humedad.js",
+  "./modules/adhesivos.js",
+  "./data/adhesivos.json",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

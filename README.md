@@ -6,6 +6,7 @@ App web instalable (PWA) pensada para tablet Android en el taller. Sin dependenc
 - `index.html` — esqueleto: barra superior, solapas, paneles.
 - `app.js` — núcleo: registro de módulos, solapas, `store` (localStorage), `num`/`fmt`, `el`, `toast`, wake lock, service worker.
 - `modules/*.js` — un archivo por módulo. Cada uno llama a `App.register({ id, title, icon, status?, render(root, api) })`.
+- `data/*.json` — contenido de las solapas de referencia (por ejemplo `data/adhesivos.json`, con copia legible en `data/adhesivos.md`). Editar el JSON cambia la solapa sin tocar código; agregarlo a `ASSETS` en `sw.js` para que funcione sin conexión.
 - `sw.js` — cache offline (red primero, caché de respaldo). **Subir `CACHE_VERSION` en cada release** y agregar a `ASSETS` cualquier archivo nuevo.
 - `manifest.webmanifest`, `icons/` — instalación en Android.
 
